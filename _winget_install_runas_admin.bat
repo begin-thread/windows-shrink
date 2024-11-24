@@ -121,7 +121,7 @@ if /i "%answer%"=="y" (
     echo You chose Yes.
 
     rem   ******************************   
-    winget install "Citrix.Workspace"
+    rem BUGGED winget install "Citrix.Workspace"
     winget install "Jabra.Direct"
     winget install "Microsoft.Teams"
     rem   ******************************   
