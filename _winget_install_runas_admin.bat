@@ -30,6 +30,7 @@ if /i "%answer%"=="y" (
     rem   ******************************   
     winget install "Spotify"
     winget install "NCHSoftware.VideoPad"
+    winget install "Apple.iTunes"
 
     rem   ******************************   
 
