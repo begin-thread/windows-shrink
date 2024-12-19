@@ -168,6 +168,8 @@ winget uninstall "Teams Machine-Wide Installer"
 winget uninstall "Apple.Bonjour"
 winget uninstall "Copilot"
 winget uninstall "Cortana"
+winget uninstall "Quick Assist"
+
 
 @echo off
 echo *************************************************************************
