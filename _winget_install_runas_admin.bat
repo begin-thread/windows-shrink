@@ -32,8 +32,9 @@ if /i "%answer%"=="y" (
     rem Apple Music
     winget install --id 9pfhdd62mxs1
 
+    rem iCloud
     winget install iCloud --id 9PKTQ5699M62
-
+    rem OLD VERSION winget install Apple.iCloud
     rem ******************************   
 
 ) else if /i "%answer%"=="n" (
