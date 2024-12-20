@@ -10,14 +10,36 @@ winget install "Google.Chrome"
 winget install "Google.GoogleDrive"
 winget install "Google.ChromeRemoteDesktopHost"
 
-winget install iCloud --id 9PKTQ5699M62
-
 winget install "DominikReichl.KeePass"
 
 winget install "Adobe.Acrobat.Reader.64-bit"
 winget install "Ookla.Speedtest.Desktop"
 winget install "7zip"
 winget install "lenovo vantage"
+
+
+@echo off
+echo *************************************************************************
+set /p answer="-> -> -> Install APPLE software (y/n)?"
+echo *************************************************************************
+
+if /i "%answer%"=="y" (
+    echo You chose Yes.
+
+    rem Apple TV
+    winget install --id 9NM4T8B9JQZ1
+
+    rem Apple Music
+    winget install --id 9pfhdd62mxs1
+
+    winget install iCloud --id 9PKTQ5699M62
+
+    rem ******************************   
+
+) else if /i "%answer%"=="n" (
+    echo You chose No.
+)
+
 
 @echo off
 echo *************************************************************************
@@ -27,12 +49,10 @@ echo *************************************************************************
 if /i "%answer%"=="y" (
     echo You chose Yes.
 
-    rem   ******************************   
+    rem ******************************   
     winget install "Spotify"
     winget install "NCHSoftware.VideoPad"
-    winget install "Apple.iTunes"
-
-    rem   ******************************   
+    rem ******************************   
 
 ) else if /i "%answer%"=="n" (
     echo You chose No.
@@ -46,12 +66,10 @@ echo *************************************************************************
 if /i "%answer%"=="y" (
     echo You chose Yes.
 
-    rem   ******************************   
+    rem ******************************   
     winget install "Proton.ProtonVPN"
     winget install "Proton.ProtonDrive"
-
-
-    rem   ******************************   
+    rem ******************************   
 
 ) else if /i "%answer%"=="n" (
     echo You chose No.
@@ -66,9 +84,9 @@ echo *************************************************************************
 if /i "%answer%"=="y" (
     echo You chose Yes.
 
-    rem   ******************************   
-    winget install "ESET HOME Security Essential"
-    rem   ******************************   
+    rem ******************************   
+    winget install "ESET.Security"
+    rem ******************************   
 
 ) else if /i "%answer%"=="n" (
     echo You chose No.
@@ -83,11 +101,11 @@ echo *************************************************************************
 if /i "%answer%"=="y" (
     echo You chose Yes.
 
-    rem   ******************************   
+    rem ******************************   
     winget install "GitHub.GitHubDesktop"
     winget install "Microsoft.VisualStudioCode"
     winget install Slack --id 9WZDNCRDK3WP
-    rem   ******************************   
+    rem ******************************   
 
 ) else if /i "%answer%"=="n" (
     echo You chose No.
@@ -101,13 +119,13 @@ echo *************************************************************************
 if /i "%answer%"=="y" (
     echo You chose Yes.
 
-    rem   ******************************   
+    rem ******************************   
     winget install "ElectronicArts.EADesktop"
     winget install "Blizzard.BattleNet"
     winget install "Valve.Steam"
     winget install "Nvidia.GeForceExperience"
     winget install -e --id "Nvidia.GeForceNow"
-    rem   ******************************   
+    rem ******************************   
 
 ) else if /i "%answer%"=="n" (
     echo You chose No.
@@ -121,16 +139,16 @@ echo *************************************************************************
 if /i "%answer%"=="y" (
     echo You chose Yes.
 
-    rem   ******************************   
+    rem ******************************   
     rem BUGGED winget install "Citrix.Workspace"
     winget install "Jabra.Direct"
     winget install "Microsoft.Teams"
-    rem   ******************************   
+    rem ******************************   
 
 ) else if /i "%answer%"=="n" (
     echo You chose No.
 )
-echoon
+echo on
 
 @echo off
 echo *************************************************************************
@@ -140,9 +158,9 @@ echo *************************************************************************
 if /i "%answer%"=="y" (
     echo You chose Yes.
 
-    rem   ******************************   
+    rem ******************************   
     winget install "Apache.OpenOffice"
-    rem   ******************************   
+    rem ******************************   
 
 ) else if /i "%answer%"=="n" (
     echo You chose No.
