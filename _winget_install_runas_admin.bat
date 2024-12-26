@@ -33,7 +33,7 @@ if /i "%answer%"=="y" (
     winget install --id 9pfhdd62mxs1
 
     rem iCloud
-    winget install iCloud --id 9PKTQ5699M62
+    winget install --id 9PKTQ5699M62
     rem OLD VERSION winget install Apple.iCloud
     rem ******************************   
 
@@ -197,5 +197,17 @@ echo Stop useless services
 echo *************************************************************************
 sc config "WSearch" start=disabled
 sc stop "WSearch"
+
+@echo off
+echo *************************************************************************
+echo Remove useless startup apps
+echo *************************************************************************
+
+rem Logitech Download Assistant
+reg delete HKEY_LOCAL_MACHINE\SOFTWARE\Logishrd\DownloadAssistant
+reg delete HKEY_LOCAL_MACHINE\SOFTWARE\Logishrd\LogiLDA.DLL
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\LogiLDA.dll"
+
+
 
 pause
