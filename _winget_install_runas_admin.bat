@@ -195,6 +195,8 @@ winget uninstall "Quick Assist"
 echo *************************************************************************
 echo Stop useless services
 echo *************************************************************************
+
+echo Windows Search
 sc config "WSearch" start=disabled
 sc stop "WSearch"
 
@@ -203,7 +205,7 @@ echo *************************************************************************
 echo Remove useless startup apps
 echo *************************************************************************
 
-rem Logitech Download Assistant
+echo Logitech Download Assistant
 reg delete HKEY_LOCAL_MACHINE\SOFTWARE\Logishrd\DownloadAssistant
 reg delete HKEY_LOCAL_MACHINE\SOFTWARE\Logishrd\LogiLDA.DLL
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\LogiLDA.dll"
@@ -213,6 +215,8 @@ echo *************************************************************************
 echo Hardening
 echo *************************************************************************
 
-rem Microsoft Edge - Disable "Offer to save passwords"
+echo Microsoft Edge - Disable "Offer to save passwords"
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v PasswordManagerEnabled /t REG_DWORD /d 0 /f
+
+
 pause
