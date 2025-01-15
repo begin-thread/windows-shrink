@@ -39,7 +39,7 @@ set /p answer="-> -> -> Install APPLE software (y/n)?"
 echo *************************************************************************
 
 if /i "%answer%"=="y" (
-    echo You chose Yes.
+    echo Installing...
 
     rem Apple TV
     call :_WinGetWithID install "--id 9NM4T8B9JQZ1"
@@ -51,11 +51,10 @@ if /i "%answer%"=="y" (
     call :_WinGetWithID install "--id 9PKTQ5699M62"
     rem OLD VERSION winget install Apple.iCloud
     rem ******************************   
-
-) else if /i "%answer%"=="n" (
-    echo You chose No.
 )
-
+rem ) else if /i "%answer%"=="n" (
+rem     echo You chose No.
+rem )
 
 @echo off
 echo.
@@ -64,15 +63,12 @@ set /p answer="-> -> -> Install AUDIO-VIDEO software (y/n)?"
 echo *************************************************************************
 
 if /i "%answer%"=="y" (
-    echo You chose Yes.
+    echo Installing...
 
     rem ******************************   
     rem call :_WinGet install "Spotify"
     call :_WinGet install "NCHSoftware.VideoPad"
     rem ******************************   
-
-) else if /i "%answer%"=="n" (
-    echo You chose No.
 )
 
 @echo off
@@ -82,15 +78,13 @@ set /p answer="-> -> -> Install PROTON Suite (y/n)?"
 echo *************************************************************************
 
 if /i "%answer%"=="y" (
-    echo You chose Yes.
+    echo Installing...
 
     rem ******************************   
     call :_WinGet install "Proton.ProtonVPN"
     call :_WinGet install "Proton.ProtonDrive"
     rem ******************************   
 
-) else if /i "%answer%"=="n" (
-    echo You chose No.
 )
 
 
@@ -101,14 +95,12 @@ set /p answer="-> -> -> Install ESET software (y/n)?"
 echo *************************************************************************
 
 if /i "%answer%"=="y" (
-    echo You chose Yes.
+    echo Installing...
 
     rem ******************************   
     call :_WinGet install "ESET.Security"
     rem ******************************   
 
-) else if /i "%answer%"=="n" (
-    echo You chose No.
 )
 
 
@@ -119,7 +111,7 @@ set /p answer="-> -> -> Install DEV software (y/n)?"
 echo *************************************************************************
 
 if /i "%answer%"=="y" (
-    echo You chose Yes.
+    echo Installing...
 
     rem ******************************   
     call :_WinGet install "GitHub.GitHubDesktop"
@@ -128,8 +120,6 @@ if /i "%answer%"=="y" (
     rem winget install Slack --id 9WZDNCRDK3WP
     rem ******************************   
 
-) else if /i "%answer%"=="n" (
-    echo You chose No.
 )
 
 @echo off
@@ -139,7 +129,7 @@ set /p answer="-> -> -> Install GAMING software (y/n)?"
 echo *************************************************************************
 
 if /i "%answer%"=="y" (
-    echo You chose Yes.
+    echo Installing...
 
     rem ******************************   
     call :_WinGet install "ElectronicArts.EADesktop"
@@ -148,8 +138,6 @@ if /i "%answer%"=="y" (
     call :_WinGet install "Nvidia.GeForceExperience"
     rem ******************************   
 
-) else if /i "%answer%"=="n" (
-    echo You chose No.
 )
 
 @echo off
@@ -159,7 +147,7 @@ set /p answer="-> -> -> Install OFFICE software (y/n)?"
 echo *************************************************************************
 
 if /i "%answer%"=="y" (
-    echo You chose Yes.
+    echo Installing...
 
     rem ******************************   
     rem BUGGED call :_WinGet install "Citrix.Workspace"
@@ -167,8 +155,6 @@ if /i "%answer%"=="y" (
     call :_WinGet install "Microsoft.Teams"
     rem ******************************   
 
-) else if /i "%answer%"=="n" (
-    echo You chose No.
 )
 
 @echo off
@@ -178,14 +164,28 @@ set /p answer="-> -> -> Install OpenOffice software (y/n)?"
 echo *************************************************************************
 
 if /i "%answer%"=="y" (
-    echo You chose Yes.
+    echo Installing...
 
     rem ******************************   
     call :_WinGet install "Apache.OpenOffice"
     rem ******************************   
 
-) else if /i "%answer%"=="n" (
-    echo You chose No.
+)
+
+
+@echo off
+echo.
+echo *************************************************************************
+set /p answer="-> -> -> Install AI software (y/n)?"
+echo *************************************************************************
+
+if /i "%answer%"=="y" (
+    echo Installing...
+
+    rem ******************************   
+    call :_WinGet install "ElementLabs.LMStudio"
+    rem ******************************   
+
 )
 
 @echo off
