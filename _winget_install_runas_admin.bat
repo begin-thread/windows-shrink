@@ -260,6 +260,17 @@ echo You entered: %_download_path%
 
 reg add "HKCU\SOFTWARE\Policies\Microsoft\Edge" /v DownloadDirectory /t REG_SZ /d %_download_path% /f
 
+
+echo *************************************************************************
+echo Disable Sleep
+echo *************************************************************************
+powercfg /x -hibernate-timeout-ac 0
+powercfg /x -disk-timeout-ac 0
+powercfg /x -monitor-timeout-ac 0
+Powercfg /x -standby-timeout-ac 0
+
+
+
 goto :eof
 
 
