@@ -3,11 +3,11 @@ cls
 
 rem *************************************************************************
 rem TESTS
-rem call :_WinGet install "Brave Browser"
+rem :_WinGet install "Brave Browser"
 rem pause
-rem call :_WinGetWithID install "--id 9pfhdd62mxs1"
+rem :_WinGetWithID install "--id 9pfhdd62mxs1"
 rem pause
-rem call :_WinGet install "--id 9pfhdd62mxs1"
+rem :_WinGet install "--id 9pfhdd62mxs1"
 rem pause
 rem goto :eof
 rem *************************************************************************
@@ -17,19 +17,19 @@ echo *************************************************************************
 echo Install useful software
 echo *************************************************************************
 
-call :_WinGet install "Brave Browser"
-call :_WinGet install "Mozilla.Firefox"
+:_WinGet install "Brave Browser"
+:_WinGet install "Mozilla.Firefox"
 
-call :_WinGet install "Google.Chrome"
-call :_WinGet install "Google.GoogleDrive"
-call :_WinGet install "Google.ChromeRemoteDesktopHost"
+:_WinGet install "Google.Chrome"
+:_WinGet install "Google.GoogleDrive"
+:_WinGet install "Google.ChromeRemoteDesktopHost"
 
-call :_WinGet install "DominikReichl.KeePass"
+:_WinGet install "DominikReichl.KeePass"
 
-call :_WinGet install "Adobe.Acrobat.Reader.64-bit"
-call :_WinGet install "Ookla.Speedtest.Desktop"
-call :_WinGet install "7zip"
-call :_WinGet install "lenovo vantage"
+:_WinGet install "Adobe.Acrobat.Reader.64-bit"
+:_WinGet install "Ookla.Speedtest.Desktop"
+:_WinGet install "7zip"
+:_WinGet install "lenovo vantage"
 
 
 @echo off
@@ -42,13 +42,13 @@ if /i "%answer%"=="y" (
     echo Installing...
 
     rem Apple TV
-    call :_WinGetWithID install "--id 9NM4T8B9JQZ1"
+    :_WinGetWithID install "--id 9NM4T8B9JQZ1"
 
     rem Apple Music
-    call :_WinGetWithID install "--id 9pfhdd62mxs1"
+    :_WinGetWithID install "--id 9pfhdd62mxs1"
 
     rem iCloud
-    call :_WinGetWithID install "--id 9PKTQ5699M62"
+    :_WinGetWithID install "--id 9PKTQ5699M62"
     rem OLD VERSION winget install Apple.iCloud
     rem ******************************   
 )
@@ -66,8 +66,8 @@ if /i "%answer%"=="y" (
     echo Installing...
 
     rem ******************************   
-    rem call :_WinGet install "Spotify"
-    call :_WinGet install "NCHSoftware.VideoPad"
+    rem :_WinGet install "Spotify"
+    :_WinGet install "NCHSoftware.VideoPad"
     rem ******************************   
 )
 
@@ -81,8 +81,8 @@ if /i "%answer%"=="y" (
     echo Installing...
 
     rem ******************************   
-    call :_WinGet install "Proton.ProtonVPN"
-    call :_WinGet install "Proton.ProtonDrive"
+    :_WinGet install "Proton.ProtonVPN"
+    :_WinGet install "Proton.ProtonDrive"
     rem ******************************   
 
 )
@@ -98,7 +98,7 @@ if /i "%answer%"=="y" (
     echo Installing...
 
     rem ******************************   
-    call :_WinGet install "ESET.Security"
+    :_WinGet install "ESET.Security"
     rem ******************************   
 
 )
@@ -114,9 +114,9 @@ if /i "%answer%"=="y" (
     echo Installing...
 
     rem ******************************   
-    call :_WinGet install "GitHub.GitHubDesktop"
-    call :_WinGet install "Microsoft.VisualStudioCode"
-    call :_WinGet install "Slack"
+    :_WinGet install "GitHub.GitHubDesktop"
+    :_WinGet install "Microsoft.VisualStudioCode"
+    :_WinGet install "Slack"
     rem winget install Slack --id 9WZDNCRDK3WP
     rem ******************************   
 
@@ -132,10 +132,10 @@ if /i "%answer%"=="y" (
     echo Installing...
 
     rem ******************************   
-    call :_WinGet install "ElectronicArts.EADesktop"
-    call :_WinGet install "Blizzard.BattleNet"
-    call :_WinGet install "Valve.Steam"
-    call :_WinGet install "Nvidia.GeForceExperience"
+    :_WinGet install "ElectronicArts.EADesktop"
+    :_WinGet install "Blizzard.BattleNet"
+    :_WinGet install "Valve.Steam"
+    :_WinGet install "Nvidia.GeForceExperience"
     rem ******************************   
 
 )
@@ -150,9 +150,9 @@ if /i "%answer%"=="y" (
     echo Installing...
 
     rem ******************************   
-    rem BUGGED call :_WinGet install "Citrix.Workspace"
-    call :_WinGet install "Jabra.Direct"
-    call :_WinGet install "Microsoft.Teams"
+    rem BUGGED :_WinGet install "Citrix.Workspace"
+    :_WinGet install "Jabra.Direct"
+    :_WinGet install "Microsoft.Teams"
     rem ******************************   
 
 )
@@ -167,7 +167,7 @@ if /i "%answer%"=="y" (
     echo Installing...
 
     rem ******************************   
-    call :_WinGet install "Apache.OpenOffice"
+    :_WinGet install "Apache.OpenOffice"
     rem ******************************   
 
 )
@@ -183,7 +183,7 @@ if /i "%answer%"=="y" (
     echo Installing...
 
     rem ******************************   
-    call :_WinGet install "ElementLabs.LMStudio"
+    :_WinGet install "ElementLabs.LMStudio"
     rem ******************************   
 
 )
@@ -193,32 +193,32 @@ echo.
 echo *************************************************************************
 echo Remove useless software
 echo *************************************************************************
-call :_WinGet uninstall "Microsoft Sticky Notes"
-call :_WinGet uninstall "Microsoft.OneDrive"
-call :_WinGet uninstall "Skype"
-call :_WinGet uninstall "Weather"
-call :_WinGet uninstall "Windows Media Player"
-call :_WinGet uninstall "Mail and Calendar"
-call :_WinGet uninstall "Maps"
+:_WinGet uninstall "Microsoft Sticky Notes"
+:_WinGet uninstall "Microsoft.OneDrive"
+:_WinGet uninstall "Skype"
+:_WinGet uninstall "Weather"
+:_WinGet uninstall "Windows Media Player"
+:_WinGet uninstall "Mail and Calendar"
+:_WinGet uninstall "Maps"
 
 rem Paint 3D
-call :_WinGetWithID uninstall "--id 9NBLGGH5FV99"
+:_WinGetWithID uninstall "--id 9NBLGGH5FV99"
 
 rem Movies & TV
-call :_WinGetWithID uninstall "--id 9WZDNCRFJ3P2"
+:_WinGetWithID uninstall "--id 9WZDNCRFJ3P2"
 
 rem OneNote
-call :_WinGetWithID uninstall "--id XPFFZHVGQWWLHB"
+:_WinGetWithID uninstall "--id XPFFZHVGQWWLHB"
 
-call :_WinGet uninstall "Microsoft.DevHome"
-call :_WinGet uninstall "Solitaire & Casual Games"
-call :_WinGet uninstall "Mixed Reality Portal"
-call :_WinGet uninstall "OneNote for Windows 10"
-call :_WinGet uninstall "Teams Machine-Wide Installer"
-call :_WinGet uninstall "Apple.Bonjour"
-call :_WinGet uninstall "Copilot"
-call :_WinGet uninstall "Cortana"
-call :_WinGet uninstall "Quick Assist"
+:_WinGet uninstall "Microsoft.DevHome"
+:_WinGet uninstall "Solitaire & Casual Games"
+:_WinGet uninstall "Mixed Reality Portal"
+:_WinGet uninstall "OneNote for Windows 10"
+:_WinGet uninstall "Teams Machine-Wide Installer"
+:_WinGet uninstall "Apple.Bonjour"
+:_WinGet uninstall "Copilot"
+:_WinGet uninstall "Cortana"
+:_WinGet uninstall "Quick Assist"
 
 
 @echo off
@@ -281,12 +281,12 @@ rem ---------------------------------------------------------------------------
 :_WinGet
 rem ---------------------------------------------------------------------------
     if /i %1=="" (
-        echo call eof no param
+        echo eof no param
         goto :eof
     )
 
     if /i %2=="" (
-        echo call eof no param
+        echo eof no param
         goto :eof
     )
     echo.
@@ -301,12 +301,12 @@ rem ---------------------------------------------------------------------------
 :_WinGetWithID
 rem ---------------------------------------------------------------------------
     if /i %1=="" (
-        echo call eof no param
+        echo eof no param
         goto :eof
     )
 
     if /i %2=="" (
-        echo call eof no param
+        echo eof no param
         goto :eof
     )
 
