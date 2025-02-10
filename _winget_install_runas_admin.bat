@@ -18,7 +18,7 @@ echo Install useful software
 echo *************************************************************************
 
 call :_WinGet install "Brave Browser"
-call :_WinGet install "Mozilla Firefox"
+call :_WinGet install "Mozilla.Firefox"
 
 call :_WinGet install "Google.Chrome"
 call :_WinGet install "Google.GoogleDrive"
@@ -257,18 +257,17 @@ echo Microsoft Edge - Set the Download Path
 @echo off
 set /p _download_path="-> -> -> Enter the Download path for this computer: "
 echo You entered: %_download_path%
-
 reg add "HKCU\SOFTWARE\Policies\Microsoft\Edge" /v DownloadDirectory /t REG_SZ /d %_download_path% /f
 
 
 echo *************************************************************************
 echo Disable Sleep
 echo *************************************************************************
+@echo off
 powercfg /x -hibernate-timeout-ac 0
 powercfg /x -disk-timeout-ac 0
 powercfg /x -monitor-timeout-ac 0
 Powercfg /x -standby-timeout-ac 0
-
 
 
 goto :eof
@@ -321,6 +320,5 @@ rem ---------------------------------------------------------------------------
     goto :eof
    
 rem ---------------------------------------------------------------------------
-
 
 pause
