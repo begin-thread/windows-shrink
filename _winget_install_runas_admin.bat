@@ -32,16 +32,27 @@ rem end in a newline (like echo|set /p), or if you're dealing with output redire
 rem having an echo. can prevent the next command from being concatenated to the previous output. 
 rem This is less common in straightforward scripts but can be relevant in more complex scenarios.
 
+echo.
 call :_WinGet install "Brave Browser"
+echo.
 call :_WinGet install "Mozilla.Firefox"
+echo.
 call :_WinGet install "Google.Chrome"
+echo.
 call :_WinGet install "Google.GoogleDrive"
+echo.
 call :_WinGet install "Google.ChromeRemoteDesktopHost"
+echo.
 call :_WinGet install "DominikReichl.KeePass"
+echo.
 call :_WinGet install "Adobe.Acrobat.Reader.64-bit"
+echo.
 call :_WinGet install "Ookla.Speedtest.Desktop"
+echo.
 call :_WinGet install "7zip"
+echo.
 call :_WinGet install "lenovo vantage"
+echo.
 
 @echo off
 echo.
@@ -75,6 +86,7 @@ IF '%yes_or_no%' == 'y' (
 
     rem ******************************   
     rem call :_WinGet install "Spotify"
+    echo.
     call :_WinGet install "NCHSoftware.VideoPad"
     rem ******************************   
 )
@@ -89,7 +101,9 @@ IF '%yes_or_no%' == 'y' (
     echo Installing...
 
     rem ******************************   
+    echo.
     call :_WinGet install "Proton.ProtonVPN"
+    echo.
     call :_WinGet install "Proton.ProtonDrive"
     rem ******************************   
 )
@@ -105,6 +119,7 @@ IF '%yes_or_no%' == 'y' (
     echo Installing...
 
     rem ******************************   
+    echo.
     call :_WinGet install "ESET.Security"
     rem ******************************   
 )
@@ -120,8 +135,11 @@ IF '%yes_or_no%' == 'y' (
     echo Installing...
 
     rem ******************************   
+    echo.
     call :_WinGet install "GitHub.GitHubDesktop"
+    echo.
     call :_WinGet install "Microsoft.VisualStudioCode"
+    echo.
     call :_WinGet install "Slack"
     rem winget install Slack --id 9WZDNCRDK3WP
     rem ******************************   
@@ -137,9 +155,13 @@ IF '%yes_or_no%' == 'y' (
     echo Installing...
 
     rem ******************************   
+    echo.
     call :_WinGet install "ElectronicArts.EADesktop"
+    echo.
     call :_WinGet install "Blizzard.BattleNet"
+    echo.
     call :_WinGet install "Valve.Steam"
+    echo.
     call :_WinGet install "Nvidia.GeForceExperience"
     rem ******************************   
 )
@@ -155,7 +177,9 @@ IF '%yes_or_no%' == 'y' (
 
     rem ******************************   
     rem BUGGED call :_WinGet install "Citrix.Workspace"
+    echo.
     call :_WinGet install "Jabra.Direct"
+    echo.
     call :_WinGet install "Microsoft.Teams"
     rem ******************************   
 )
@@ -170,6 +194,7 @@ IF '%yes_or_no%' == 'y' (
     echo Installing...
 
     rem ******************************   
+    echo.
     call :_WinGet install "Apache.OpenOffice"
     rem ******************************   
 )
@@ -184,6 +209,7 @@ IF '%yes_or_no%' == 'y' (
     echo Installing...
 
     rem ******************************   
+    echo.
     call :_WinGet install "ElementLabs.LMStudio"
     rem ******************************   
 )
@@ -193,33 +219,52 @@ echo.
 echo *************************************************************************
 echo Remove useless software
 echo *************************************************************************
+echo.
 call :_WinGet uninstall "Microsoft Sticky Notes"
+echo.
 call :_WinGet uninstall "Microsoft.OneDrive"
+echo.
 call :_WinGet uninstall "Skype"
+echo.
 call :_WinGet uninstall "Weather"
+echo.
 call :_WinGet uninstall "Windows Media Player"
+echo.
 call :_WinGet uninstall "Mail and Calendar"
+echo.
 call :_WinGet uninstall "Maps"
 
 rem Paint 3D
+echo.
 call :_WinGetWithID uninstall "--id 9NBLGGH5FV99"
 
 rem Movies & TV
+echo.
 call :_WinGetWithID uninstall "--id 9WZDNCRFJ3P2"
 
 rem OneNote
+echo.
 call :_WinGetWithID uninstall "--id XPFFZHVGQWWLHB"
 
+echo.
 call :_WinGet uninstall "Microsoft.DevHome"
+echo.
 call :_WinGet uninstall "Solitaire & Casual Games"
+echo.
 call :_WinGet uninstall "Mixed Reality Portal"
+echo.
 call :_WinGet uninstall "OneNote for Windows 10"
+echo.
 call :_WinGet uninstall "Teams Machine-Wide Installer"
+echo.
 call :_WinGet uninstall "Apple.Bonjour"
+echo.
 call :_WinGet uninstall "Copilot"
+echo.
 call :_WinGet uninstall "Cortana"
 
 rem QuickAssit
+echo.
 call :_WinGetWithID uninstall "--id 9P7BP5VNWKX5"
 
 
@@ -228,6 +273,7 @@ echo.
 echo *************************************************************************
 echo Stop useless services
 echo *************************************************************************
+echo.
 echo Windows Search
 sc config "WSearch" start=disabled
 sc stop "WSearch"
@@ -237,6 +283,7 @@ echo.
 echo *************************************************************************
 echo Remove useless startup apps
 echo *************************************************************************
+echo.
 echo Logitech Download Assistant
 reg delete HKEY_LOCAL_MACHINE\SOFTWARE\Logishrd\DownloadAssistant
 reg delete HKEY_LOCAL_MACHINE\SOFTWARE\Logishrd\LogiLDA.DLL
@@ -285,7 +332,7 @@ rem *************************************************************************
 
 rem ---------------------------------------------------------------------------
 :_WinGet
-    echo.
+rem     echo.
     if %1 == "" (
         echo eof no param
         goto :eof
@@ -296,7 +343,7 @@ rem ---------------------------------------------------------------------------
         goto :eof
     )
 
-    echo.
+rem    echo.
     echo winget %1 %2
   
     winget %1 %2
@@ -306,7 +353,7 @@ rem ---------------------------------------------------------------------------
 
 rem ---------------------------------------------------------------------------
 :_WinGetWithID
-    echo.
+rem     echo.
 
     if %1 == "" (
         echo eof no param
@@ -321,7 +368,7 @@ rem ---------------------------------------------------------------------------
     setlocal enabledelayedexpansion
     set "param2=%~2"
 
-    echo.
+rem     echo.
     echo winget %1 !%param2!
   
     winget %1 !%param2!
