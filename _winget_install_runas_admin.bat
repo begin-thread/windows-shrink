@@ -332,7 +332,7 @@ rem *************************************************************************
 
 rem ---------------------------------------------------------------------------
 :_WinGet
-rem     echo.
+    echo.
     if %1 == "" (
         echo eof no param
         goto :eof
@@ -343,7 +343,7 @@ rem     echo.
         goto :eof
     )
 
-rem    echo.
+    echo.
     echo winget %1 %2
   
     winget %1 %2
@@ -353,7 +353,7 @@ rem ---------------------------------------------------------------------------
 
 rem ---------------------------------------------------------------------------
 :_WinGetWithID
-rem     echo.
+    echo.
 
     if %1 == "" (
         echo eof no param
@@ -368,7 +368,7 @@ rem     echo.
     setlocal enabledelayedexpansion
     set "param2=%~2"
 
-rem     echo.
+    echo.
     echo winget %1 !%param2!
   
     winget %1 !%param2!
