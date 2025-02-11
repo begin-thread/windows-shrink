@@ -27,16 +27,32 @@ echo *************************************************************************
 echo Install useful software
 echo *************************************************************************
 
+rem Preventing Command Meld: In some cases, if a function ends with a command that doesn't 
+rem end in a newline (like echo|set /p), or if you're dealing with output redirection, 
+rem having an echo. can prevent the next command from being concatenated to the previous output. 
+rem This is less common in straightforward scripts but can be relevant in more complex scenarios.
+
+echo.
 call :_WinGet install "Brave Browser"
+echo.
 call :_WinGet install "Mozilla.Firefox"
+echo.
 call :_WinGet install "Google.Chrome"
+echo.
 call :_WinGet install "Google.GoogleDrive"
+echo.
 call :_WinGet install "Google.ChromeRemoteDesktopHost"
+echo.
 call :_WinGet install "DominikReichl.KeePass"
+echo.
 call :_WinGet install "Adobe.Acrobat.Reader.64-bit"
+echo.
 call :_WinGet install "Ookla.Speedtest.Desktop"
+echo.
 call :_WinGet install "7zip"
+echo.
 call :_WinGet install "lenovo vantage"
+echo.
 
 @echo off
 echo.
