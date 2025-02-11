@@ -311,11 +311,13 @@ echo.
 echo *************************************************************************
 echo Disable Sleep
 echo *************************************************************************
-echo on
+
+@echo on
 powercfg /x -hibernate-timeout-ac 0
 powercfg /x -disk-timeout-ac 0
 powercfg /x -monitor-timeout-ac 0
 powercfg /x -standby-timeout-ac 0
+@echo off
 
 echo *************************************************************************
 echo End
