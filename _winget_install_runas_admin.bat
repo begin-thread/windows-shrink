@@ -311,7 +311,7 @@ echo.
 echo *************************************************************************
 echo Disable Sleep
 echo *************************************************************************
-echo.
+echo on
 powercfg /x -hibernate-timeout-ac 0
 powercfg /x -disk-timeout-ac 0
 powercfg /x -monitor-timeout-ac 0
