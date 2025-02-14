@@ -105,6 +105,10 @@ IF '%yes_or_no%' == 'y' (
     call :_WinGet install "Proton.ProtonVPN"
     echo.
     call :_WinGet install "Proton.ProtonDrive"
+    echo.
+    call :_WinGet install "Proton.ProtonMail"
+    echo.
+    call :_WinGet install "Proton.ProtonPass"
     rem ******************************   
 )
 
