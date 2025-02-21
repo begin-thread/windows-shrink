@@ -144,8 +144,8 @@ IF '%yes_or_no%' == 'y' (
     echo.
     winget install "Microsoft.VisualStudioCode"
     echo.
-    winget install "Slack"
-    rem winget install Slack --id 9WZDNCRDK3WP
+    rem winget install "Slack"
+    winget install Slack --id 9WZDNCRDK3WP
     rem ******************************   
 )
 
@@ -240,15 +240,15 @@ winget uninstall "Maps"
 
 rem Paint 3D
 echo.
-winget uninstall "--id 9NBLGGH5FV99"
+winget uninstall --id 9NBLGGH5FV99
 
 rem Movies & TV
 echo.
-winget uninstall "--id 9WZDNCRFJ3P2"
+winget uninstall --id 9WZDNCRFJ3P2
 
 rem OneNote
 echo.
-winget uninstall "--id XPFFZHVGQWWLHB"
+winget uninstall --id XPFFZHVGQWWLHB
 
 echo.
 winget uninstall "Microsoft.DevHome"
@@ -269,7 +269,7 @@ winget uninstall "Cortana"
 
 rem QuickAssit
 echo.
-winget uninstall "--id 9P7BP5VNWKX5"
+winget uninstall --id 9P7BP5VNWKX5
 
 
 @echo off
