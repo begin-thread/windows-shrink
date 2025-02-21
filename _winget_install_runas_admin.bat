@@ -13,11 +13,11 @@ rem goto :eof
 
 rem *************************************************************************
 rem TESTS
-rem call :_WinGet install "Brave Browser"
+rem winget install "Brave Browser"
 rem pause
-rem call :_WinGetWithID install "--id 9pfhdd62mxs1"
+rem winget install "--id 9pfhdd62mxs1"
 rem pause
-rem call :_WinGet install "--id 9pfhdd62mxs1"
+rem winget install "--id 9pfhdd62mxs1"
 rem pause
 rem goto :eof
 rem *************************************************************************
@@ -33,25 +33,25 @@ rem having an echo. can prevent the next command from being concatenated to the 
 rem This is less common in straightforward scripts but can be relevant in more complex scenarios.
 
 echo.
-call :_WinGet install "Brave Browser"
+winget install "Brave Browser"
 echo.
-call :_WinGet install "Mozilla.Firefox"
+winget install "Mozilla.Firefox"
 echo.
-call :_WinGet install "Google.Chrome"
+winget install "Google.Chrome"
 echo.
-call :_WinGet install "Google.GoogleDrive"
+winget install "Google.GoogleDrive"
 echo.
-call :_WinGet install "Google.ChromeRemoteDesktopHost"
+winget install "Google.ChromeRemoteDesktopHost"
 echo.
-call :_WinGet install "DominikReichl.KeePass"
+winget install "DominikReichl.KeePass"
 echo.
-call :_WinGet install "Adobe.Acrobat.Reader.64-bit"
+winget install "Adobe.Acrobat.Reader.64-bit"
 echo.
-call :_WinGet install "Ookla.Speedtest.Desktop"
+winget install "Ookla.Speedtest.Desktop"
 echo.
-call :_WinGet install "7zip"
+winget install "7zip"
 echo.
-call :_WinGet install "lenovo vantage"
+winget install "lenovo vantage"
 echo.
 
 @echo off
@@ -63,13 +63,13 @@ echo *************************************************************************
 
 IF '%yes_or_no%' == 'y' (
     rem Apple TV
-    call :_WinGetWithID install "--id 9NM4T8B9JQZ1"
+    winget install "--id 9NM4T8B9JQZ1"
 
     rem Apple Music
-    rem call :_WinGetWithID install "--id 9pfhdd62mxs1"
+    rem winget install "--id 9pfhdd62mxs1"
 
     rem iCloud
-    rem call :_WinGetWithID install "--id 9PKTQ5699M62"
+    rem winget install "--id 9PKTQ5699M62"
     rem OLD VERSION winget install Apple.iCloud
     rem ******************************
 
@@ -85,9 +85,9 @@ IF '%yes_or_no%' == 'y' (
     echo Installing...
 
     rem ******************************   
-    rem call :_WinGet install "Spotify"
+    rem winget install "Spotify"
     echo.
-    call :_WinGet install "NCHSoftware.VideoPad"
+    winget install "NCHSoftware.VideoPad"
     rem ******************************   
 )
 
@@ -102,13 +102,13 @@ IF '%yes_or_no%' == 'y' (
 
     rem ******************************   
     echo.
-    call :_WinGet install "Proton.ProtonVPN"
+    winget install "Proton.ProtonVPN"
     echo.
-    call :_WinGet install "Proton.ProtonDrive"
+    winget install "Proton.ProtonDrive"
     echo.
-    call :_WinGet install "Proton.ProtonMail"
+    winget install "Proton.ProtonMail"
     echo.
-    call :_WinGet install "Proton.ProtonPass"
+    winget install "Proton.ProtonPass"
     rem ******************************   
 )
 
@@ -124,7 +124,7 @@ IF '%yes_or_no%' == 'y' (
 
     rem ******************************   
     echo.
-    call :_WinGet install "ESET.Security"
+    winget install "ESET.Security"
     rem ******************************   
 )
 
@@ -140,11 +140,11 @@ IF '%yes_or_no%' == 'y' (
 
     rem ******************************   
     echo.
-    call :_WinGet install "GitHub.GitHubDesktop"
+    winget install "GitHub.GitHubDesktop"
     echo.
-    call :_WinGet install "Microsoft.VisualStudioCode"
+    winget install "Microsoft.VisualStudioCode"
     echo.
-    call :_WinGet install "Slack"
+    winget install "Slack"
     rem winget install Slack --id 9WZDNCRDK3WP
     rem ******************************   
 )
@@ -160,13 +160,13 @@ IF '%yes_or_no%' == 'y' (
 
     rem ******************************   
     echo.
-    call :_WinGet install "ElectronicArts.EADesktop"
+    winget install "ElectronicArts.EADesktop"
     echo.
-    call :_WinGet install "Blizzard.BattleNet"
+    winget install "Blizzard.BattleNet"
     echo.
-    call :_WinGet install "Valve.Steam"
+    winget install "Valve.Steam"
     echo.
-    call :_WinGet install "Nvidia.GeForceExperience"
+    winget install "Nvidia.GeForceExperience"
     rem ******************************   
 )
 
@@ -180,11 +180,11 @@ IF '%yes_or_no%' == 'y' (
     echo Installing...
 
     rem ******************************   
-    rem BUGGED call :_WinGet install "Citrix.Workspace"
+    rem BUGGED winget install "Citrix.Workspace"
     echo.
-    call :_WinGet install "Jabra.Direct"
+    winget install "Jabra.Direct"
     echo.
-    call :_WinGet install "Microsoft.Teams"
+    winget install "Microsoft.Teams"
     rem ******************************   
 )
 
@@ -199,7 +199,7 @@ IF '%yes_or_no%' == 'y' (
 
     rem ******************************   
     echo.
-    call :_WinGet install "Apache.OpenOffice"
+    winget install "Apache.OpenOffice"
     rem ******************************   
 )
 
@@ -214,7 +214,7 @@ IF '%yes_or_no%' == 'y' (
 
     rem ******************************   
     echo.
-    call :_WinGet install "ElementLabs.LMStudio"
+    winget install "ElementLabs.LMStudio"
     rem ******************************   
 )
 
@@ -224,52 +224,52 @@ echo *************************************************************************
 echo Remove useless software
 echo *************************************************************************
 echo.
-call :_WinGet uninstall "Microsoft Sticky Notes"
+winget uninstall "Microsoft Sticky Notes"
 echo.
-call :_WinGet uninstall "Microsoft.OneDrive"
+winget uninstall "Microsoft.OneDrive"
 echo.
-call :_WinGet uninstall "Skype"
+winget uninstall "Skype"
 echo.
-call :_WinGet uninstall "Weather"
+winget uninstall "Weather"
 echo.
-call :_WinGet uninstall "Windows Media Player"
+winget uninstall "Windows Media Player"
 echo.
-call :_WinGet uninstall "Mail and Calendar"
+winget uninstall "Mail and Calendar"
 echo.
-call :_WinGet uninstall "Maps"
+winget uninstall "Maps"
 
 rem Paint 3D
 echo.
-call :_WinGetWithID uninstall "--id 9NBLGGH5FV99"
+winget uninstall "--id 9NBLGGH5FV99"
 
 rem Movies & TV
 echo.
-call :_WinGetWithID uninstall "--id 9WZDNCRFJ3P2"
+winget uninstall "--id 9WZDNCRFJ3P2"
 
 rem OneNote
 echo.
-call :_WinGetWithID uninstall "--id XPFFZHVGQWWLHB"
+winget uninstall "--id XPFFZHVGQWWLHB"
 
 echo.
-call :_WinGet uninstall "Microsoft.DevHome"
+winget uninstall "Microsoft.DevHome"
 echo.
-call :_WinGet uninstall "Solitaire & Casual Games"
+winget uninstall "Solitaire & Casual Games"
 echo.
-call :_WinGet uninstall "Mixed Reality Portal"
+winget uninstall "Mixed Reality Portal"
 echo.
-call :_WinGet uninstall "OneNote for Windows 10"
+winget uninstall "OneNote for Windows 10"
 echo.
-call :_WinGet uninstall "Teams Machine-Wide Installer"
+winget uninstall "Teams Machine-Wide Installer"
 echo.
-call :_WinGet uninstall "Apple.Bonjour"
+winget uninstall "Apple.Bonjour"
 echo.
-call :_WinGet uninstall "Copilot"
+winget uninstall "Copilot"
 echo.
-call :_WinGet uninstall "Cortana"
+winget uninstall "Cortana"
 
 rem QuickAssit
 echo.
-call :_WinGetWithID uninstall "--id 9P7BP5VNWKX5"
+winget uninstall "--id 9P7BP5VNWKX5"
 
 
 @echo off
@@ -358,7 +358,7 @@ rem ---------------------------------------------------------------------------
 rem ---------------------------------------------------------------------------
 
 rem ---------------------------------------------------------------------------
-:_WinGetWithID
+:_winget
     echo.
 
     if %1 == "" (
