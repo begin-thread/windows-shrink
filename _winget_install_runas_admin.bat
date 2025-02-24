@@ -232,6 +232,8 @@ IF '%yes_or_no%' == 'y' (
     winget install "Google.ChromeRemoteDesktopHost"
     
     winget install "Devolutions.RemoteDesktopManager"
+
+    winget install "Putty.Putty"
     rem ******************************   
 )
 
