@@ -237,6 +237,27 @@ IF '%yes_or_no%' == 'y' (
     rem ******************************   
 )
 
+echo *************************************************************************
+set /p yes_or_no="Set vulnerability scanner requirements (y/n)?"
+echo *************************************************************************
+
+IF '%yes_or_no%' == 'y' (
+    echo Installing...
+
+    rem ******************************   
+    sc config remoteregistry start=auto
+
+    netsh advfirewall firewall add rule name= "Open Port 445" dir=in action=allow 
+
+    reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\system\LocalAccountTokenFilterPolicy " /f /v DisableIPSourceRouting  /t REG_DWORD /d 1
+
+    reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System " /f /v EnableLUA  /t REG_DWORD /d 0
+
+    reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
+
+    rem ******************************   
+)
+
 @echo off
 
 echo *************************************************************************
