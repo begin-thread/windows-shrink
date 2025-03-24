@@ -141,9 +141,13 @@ IF '%yes_or_no%' == 'y' (
     winget install "GitHub.GitHubDesktop"
     
     winget install "Microsoft.VisualStudioCode"
-    
+
+    winget install "GitHub.cli"
+
     rem winget install "Slack"
     winget install Slack --id 9WZDNCRDK3WP
+
+    winget install discord.discord
     rem ******************************   
 )
 
