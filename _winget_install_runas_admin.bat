@@ -147,7 +147,9 @@ IF '%yes_or_no%' == 'y' (
     rem winget install "Slack"
     winget install Slack --id 9WZDNCRDK3WP
 
-    winget install discord.discord
+    winget install Discord.Discord
+	
+    winget install Notepad++
     rem ******************************   
 )
 
