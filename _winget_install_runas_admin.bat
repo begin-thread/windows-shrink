@@ -141,6 +141,7 @@ IF '%yes_or_no%' == 'y' (
     winget install "GitHub.GitHubDesktop"
     
     winget install "Microsoft.VisualStudioCode"
+    rem winget install "Microsoft.VisualStudio.2022.Community"
 
     winget install "GitHub.cli"
 
