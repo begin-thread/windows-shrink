@@ -51,6 +51,8 @@ winget install "7zip"
 
 winget install "lenovo vantage"
 
+winget install "VideoLAN.VLC"
+
 
 @echo off
 
