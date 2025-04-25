@@ -236,7 +236,7 @@ IF '%yes_or_no%' == 'y' (
 
     rem ******************************   
     
-    winget install "TailScale.TailScale"
+    rem winget install "TailScale.TailScale"
     
     winget install "Google.ChromeRemoteDesktopHost"
     
