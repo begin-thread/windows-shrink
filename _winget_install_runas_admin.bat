@@ -15,9 +15,9 @@ rem *************************************************************************
 rem TESTS
 rem winget install "Brave Browser"
 rem pause
-rem winget install "--id 9pfhdd62mxs1"
+rem winget install --id 9pfhdd62mxs1
 rem pause
-rem winget install "--id 9pfhdd62mxs1"
+rem winget install --id 9pfhdd62mxs1
 rem pause
 rem goto :eof
 rem *************************************************************************
@@ -63,13 +63,13 @@ echo *************************************************************************
 
 IF '%yes_or_no%' == 'y' (
     rem Apple TV
-    winget install "--id 9NM4T8B9JQZ1"
+    winget install --id 9NM4T8B9JQZ1
 
     rem Apple Music
-    rem winget install "--id 9pfhdd62mxs1"
+    rem winget install --id 9pfhdd62mxs1
 
     rem iCloud
-    rem winget install "--id 9PKTQ5699M62"
+    winget install --id 9PKTQ5699M62
     rem OLD VERSION winget install Apple.iCloud
     rem ******************************
 
@@ -368,7 +368,7 @@ echo *************************************************************************
 @echo on
 powercfg /x -hibernate-timeout-ac 0
 powercfg /x -disk-timeout-ac 0
-powercfg /x -monitor-timeout-ac 0
+powercfg /x -monitor-timeout-ac 300
 powercfg /x -standby-timeout-ac 0
 @echo off
 
