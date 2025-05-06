@@ -316,6 +316,8 @@ winget uninstall "Copilot"
 
 winget uninstall "Cortana"
 
+winget uninstall "power automate"
+
 rem QuickAssit
 
 winget uninstall --id 9P7BP5VNWKX5
