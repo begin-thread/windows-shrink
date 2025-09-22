@@ -274,53 +274,55 @@ echo Remove useless software
 echo *************************************************************************
 
 winget uninstall "Microsoft Sticky Notes"
-
 winget uninstall "Microsoft.OneDrive"
+winget uninstall "Microsoft.DevHome"
+winget uninstall "OneNote for Windows 10"
+winget uninstall "microsoft to do"
 
+winget uninstall "Microsoft.Teams"
+winget uninstall "Teams Machine-Wide Installer"
 winget uninstall "Skype"
 
-winget uninstall "Weather"
 
-winget uninstall "Windows Media Player"
+winget uninstall "xbox"
+winget uninstall "gaming services"
+
+winget uninstall "Start Experiences App"
+winget uninstall "feedback hub"
+
+winget uninstall "power automate"
 
 winget uninstall "Mail and Calendar"
+winget uninstall "Outlook"
+>winget uninstall "microsoft bing"
 
 winget uninstall "Maps"
-
-rem Paint 3D
-
-winget uninstall --id 9NBLGGH5FV99
-
-rem Movies & TV
-
-winget uninstall --id 9WZDNCRFJ3P2
-
-rem OneNote
-
-winget uninstall --id XPFFZHVGQWWLHB
-
-
-winget uninstall "Microsoft.DevHome"
-
 winget uninstall "Solitaire & Casual Games"
-
 winget uninstall "Mixed Reality Portal"
-
-winget uninstall "OneNote for Windows 10"
-
-winget uninstall "Teams Machine-Wide Installer"
+winget uninstall "Weather"
+winget uninstall "Windows Media Player"
 
 winget uninstall "Apple.Bonjour"
 
 winget uninstall "Copilot"
-
 winget uninstall "Cortana"
 
-winget uninstall "power automate"
 
-rem QuickAssit
 
+rem Paint 3D
+winget uninstall --id 9NBLGGH5FV99
+
+rem Movies & TV
+winget uninstall --id 9WZDNCRFJ3P2
+
+rem OneNote
+winget uninstall --id XPFFZHVGQWWLHB
+
+rem QuickAssist
 winget uninstall --id 9P7BP5VNWKX5
+
+rem 2025-09-21
+winget uninstall family
 
 
 @echo off
