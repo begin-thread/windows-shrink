@@ -34,12 +34,7 @@ rem This is less common in straightforward scripts but can be relevant in more c
 
 
 winget install "Brave Browser"
-
 winget install "Mozilla.Firefox"
-
-winget install "Google.Chrome"
-
-winget install "Google.GoogleDrive"
 
 winget install "DominikReichl.KeePass"
 
@@ -49,13 +44,9 @@ winget install "Ookla.Speedtest.Desktop"
 
 winget install "7zip"
 
-winget install "lenovo vantage"
 
-winget install "VideoLAN.VLC"
-
-
+REM ###############################################################################################
 @echo off
-
 echo *************************************************************************
 set yes_or_no='y'
 set /p yes_or_no="Install APPLE software (y/n)?"
@@ -75,8 +66,32 @@ IF '%yes_or_no%' == 'y' (
 
 )
 
+REM ###############################################################################################
 @echo off
+echo *************************************************************************
+set yes_or_no='y'
+set /p yes_or_no="Install LENOVO software (y/n)?"
+echo *************************************************************************
 
+IF '%yes_or_no%' == 'y' (
+winget install "lenovo vantage"
+)
+
+REM ###############################################################################################
+@echo off
+echo *************************************************************************
+set yes_or_no='y'
+set /p yes_or_no="Install GOOGLE software (y/n)?"
+echo *************************************************************************
+
+IF '%yes_or_no%' == 'y' (
+    winget install "Google.Chrome"
+    winget install "Google.GoogleDrive"
+
+)
+
+REM ###############################################################################################
+@echo off
 echo *************************************************************************
 set /p yes_or_no="Install AUDIO-VIDEO software (y/n)?"
 echo *************************************************************************
@@ -88,11 +103,13 @@ IF '%yes_or_no%' == 'y' (
     rem winget install "Spotify"
     
     winget install "NCHSoftware.VideoPad"
+    winget install "VideoLAN.VLC"
+
     rem ******************************   
 )
 
+REM ###############################################################################################
 @echo off
-
 echo *************************************************************************
 set /p yes_or_no="Install PROTON Suite (y/n)?"
 echo *************************************************************************
@@ -113,8 +130,8 @@ IF '%yes_or_no%' == 'y' (
 )
 
 
+REM ###############################################################################################
 @echo off
-
 echo *************************************************************************
 set /p yes_or_no="Install ESET software (y/n)?"
 echo *************************************************************************
@@ -129,8 +146,8 @@ IF '%yes_or_no%' == 'y' (
 )
 
 
+REM ###############################################################################################
 @echo off
-
 echo *************************************************************************
 set /p yes_or_no="Install DEV software (y/n)?"
 echo *************************************************************************
@@ -156,8 +173,8 @@ IF '%yes_or_no%' == 'y' (
     rem ******************************   
 )
 
+REM ###############################################################################################
 @echo off
-
 echo *************************************************************************
 set /p yes_or_no="Install GAMING software (y/n)?"
 echo *************************************************************************
@@ -177,8 +194,8 @@ IF '%yes_or_no%' == 'y' (
     rem ******************************   
 )
 
+REM ###############################################################################################
 @echo off
-
 echo *************************************************************************
 set /p yes_or_no="Install OFFICE software (y/n)?"
 echo *************************************************************************
@@ -195,8 +212,8 @@ IF '%yes_or_no%' == 'y' (
     rem ******************************   
 )
 
+REM ###############################################################################################
 @echo off
-
 echo *************************************************************************
 set /p yes_or_no="Install OpenOffice software (y/n)?"
 echo *************************************************************************
@@ -210,8 +227,8 @@ IF '%yes_or_no%' == 'y' (
     rem ******************************   
 )
 
+REM ###############################################################################################
 @echo off
-
 echo *************************************************************************
 set /p yes_or_no="Install AI software (y/n)?"
 echo *************************************************************************
@@ -225,8 +242,8 @@ IF '%yes_or_no%' == 'y' (
     rem ******************************   
 )
 
+REM ###############################################################################################
 @echo off
-
 echo *************************************************************************
 set /p yes_or_no="Install Remote Access software (y/n)?"
 echo *************************************************************************
@@ -246,6 +263,7 @@ IF '%yes_or_no%' == 'y' (
     rem ******************************   
 )
 
+REM ###############################################################################################
 echo *************************************************************************
 set /p yes_or_no="Set vulnerability scanner requirements (y/n)?"
 echo *************************************************************************
@@ -267,8 +285,8 @@ IF '%yes_or_no%' == 'y' (
     rem ******************************   
 )
 
+REM ###############################################################################################
 @echo off
-
 echo *************************************************************************
 echo Remove useless software
 echo *************************************************************************
@@ -294,7 +312,7 @@ winget uninstall "power automate"
 
 winget uninstall "Mail and Calendar"
 winget uninstall "Outlook"
->winget uninstall "microsoft bing"
+winget uninstall "microsoft bing"
 
 winget uninstall "Maps"
 winget uninstall "Solitaire & Casual Games"
@@ -306,8 +324,6 @@ winget uninstall "Apple.Bonjour"
 
 winget uninstall "Copilot"
 winget uninstall "Cortana"
-
-
 
 rem Paint 3D
 winget uninstall --id 9NBLGGH5FV99
@@ -325,8 +341,8 @@ rem 2025-09-21
 winget uninstall family
 
 
+REM ###############################################################################################
 @echo off
-
 echo *************************************************************************
 echo Stop useless services
 echo *************************************************************************
@@ -335,8 +351,8 @@ echo Windows Search
 sc config "WSearch" start=disabled
 sc stop "WSearch"
 
+REM ###############################################################################################
 @echo off
-
 echo *************************************************************************
 echo Remove useless startup apps
 echo *************************************************************************
@@ -346,15 +362,14 @@ reg delete HKEY_LOCAL_MACHINE\SOFTWARE\Logishrd\DownloadAssistant
 reg delete HKEY_LOCAL_MACHINE\SOFTWARE\Logishrd\LogiLDA.DLL
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\LogiLDA.dll"
 
+REM ###############################################################################################
 @echo off
-
 echo *************************************************************************
 echo Hardening
 echo *************************************************************************
 
 echo Microsoft Edge - Disable "Offer to save passwords"
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v PasswordManagerEnabled /t REG_DWORD /d 0 /f
-
 
 echo Microsoft Edge - Set the Download Path
 @echo off
@@ -363,8 +378,8 @@ echo You entered: %_download_path%
 reg add "HKCU\SOFTWARE\Policies\Microsoft\Edge" /v DownloadDirectory /t REG_SZ /d %_download_path% /f
 
 
+REM ###############################################################################################
 @echo off
-
 echo *************************************************************************
 echo Disable Sleep
 echo *************************************************************************
